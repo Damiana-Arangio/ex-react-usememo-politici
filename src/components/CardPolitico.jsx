@@ -1,6 +1,15 @@
+import {memo} from 'react';
+
 function CardPolitico(props) {
+
     const {politico} = props;
 
+    // Test del render
+    console.log("Render Card");
+
+    /************
+        RENDER
+    *************/
     return(
         <article className="card-politico">
             <h2>{politico.name}</h2>
@@ -11,4 +20,4 @@ function CardPolitico(props) {
     )
 }
 
-export default CardPolitico;
+export default memo(CardPolitico);
